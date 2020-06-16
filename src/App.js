@@ -1,14 +1,16 @@
 import React from 'react';
-import socket from './io';
+import { Login } from './components/Login/Login';
+import { Chat } from './components/Chat/Chat';
 
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <button onClick={() => socket}>BUTTON</button>
+      <Login />
+      <Chat />
     </div>
   );
-}
+};
 
 export default App;
