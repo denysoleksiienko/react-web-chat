@@ -11,7 +11,12 @@ const URL = 'localhost';
 
 const rooms = new Map();
 
-app.get('/rooms', (request, response) => {
+app.get('/rooms/:id', (request, response) => {
+  response.json(rooms);
+});
+
+app.post('/rooms', (request, response) => {
+  console.log(request.body);
   response.json(rooms);
 });
 
